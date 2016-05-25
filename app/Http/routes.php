@@ -22,4 +22,3 @@ Route::controllers([
 ]);
 
 Route::get('admin', 'AdminController@index');
-Route::resource('projects', 'ProjectController');
