@@ -6,7 +6,7 @@
 	<div clss="col-lg-12">
 		<ol class="breadcrumb">
 			<li>You are here: <a href="{{ url('/') }}">Home</a></li>
-			<li><a href="{{ url('/events') }}">Events</a></li>
+			<li><a href="{{ url('/events') }}">Bookings</a></li>
 			<li class="active">Add new event</li>
 		</ol>
 	</div>
@@ -65,7 +65,7 @@ $(function () {
 		"timePicker": true,
 		"timePicker24Hour": true,
 		"timePickerIncrement": 15,
-		"enabledHours": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+		"enabledHours": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
 		"autoApply": true,
 		"locale": {
 			"format": "DD/MM/YYYY HH:mm:ss",
