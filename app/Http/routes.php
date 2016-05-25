@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
+Route::get('/', 'BookingController@index');
+Route::resource('events', 'BookingController');
 
 Route::get('home', 'HomeController@index');
 

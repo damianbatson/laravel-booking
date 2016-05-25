@@ -1,1 +1,28 @@
-//
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.hyperLinkText {
+    display: inline-block;
+    font-family: 'Metrophobic', sans-serif;
+    color:#369;
+    font-size:18px;
+    /*float:left;*/
+    margin-top: 0;
+    margin-bottom:0;
+}
+.projectImgContainer {
+    width: 508px;
+    padding:8px;
+    position: relative;
+    z-index: 10;
+    /*float:left;*/
+    display:block;
+    background-color:#0CF;
+}
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  margin-top: 50px;
+}
