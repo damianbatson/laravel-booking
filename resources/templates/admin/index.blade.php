@@ -7,8 +7,8 @@
     		<div class="col-lg-12">
 
 			<div class="col-md-4">
-				<div class="panel panel info">
-					<div class="panel-heading dashboardTitle">Dashboard</div>
+				<div class="panel panel-info">
+					<div class="panel-heading">Dashboard</div>
 						<div class="panel-body">
 
 						<h2 class="dashboardText">Hello {!! ucwords(Auth::user()->username) !!}</h2>

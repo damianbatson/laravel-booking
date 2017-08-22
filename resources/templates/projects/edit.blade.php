@@ -41,7 +41,6 @@
     </div>
     <hr>
 
-
     <br>
     {!! Form::submit('Update', array('class' => 'btn btn-success')) !!}
     {!! link_to_route('projects.index', 'Cancel', null, array('class' => 'btn btn-warning')) !!}

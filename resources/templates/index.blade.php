@@ -1,43 +1,73 @@
-@extends('layouts.single')
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ url('/') }}/_asset/favicon.png">
 
-@section('content')
+    <title>{{ config('app.name') }} - {{ $page_title or ''}}</title>
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            
-                <!-- <a href="http://laravel.com" title="Laravel PHP Framework"></a> -->
-                <h2 class="projectTitle">Portfolio</h2>
-                <li class="Login">{!! HTML::link('auth/login', 'Login') !!}</li>
-                @foreach ($projects as $project)
-                    <div class="col-sm-6">
-                    <div class="col-md-8">
-                    <h3 class="projectTitle">{{ $project->exercise }}</h3>
-                    <h5>{{ $project->id }}</h5>
-                    
-                    <p>{{ $project->description }}</p>
-                    <p>{!! HTML::link('projects/'.$project->id, 'link to project') !!}</p>
-                    
-                    </div>
-                    <div class="col-md-4"><img class="img-responsive" src="{{ $project->image }}"></div>
-                    <hr>
-                    </div>
-                @endforeach
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-            
+    <!-- Custom styles for this template -->
+    <!-- <link href="{{ url('_asset/css') }}/style.css" rel="stylesheet"> -->
+    <!-- <link href="{{ url('_asset/css') }}/daterangepicker.css" rel="stylesheet"> -->
+    <!-- <link href="{{ url('_asset/fullcalendar') }}/fullcalendar.min.css" rel="stylesheet"> -->
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name') }}</a>
         </div>
-    </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ url('events') }}">Events List</a></li>
+            <li><a href="{{ url('events/create') }}">Add new event</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="container">
 
-    <hr>
+        @yield('content')
+        
+    </div> <!-- /container -->
 
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; Company 2013 &middot; Facebook &middot; Twitter &middot; Google+</p>
-            </div>
+    <footer class="footer">
+    <div class="container">
+        <p>Built by <a href="http://pisyek.com">Pisyek</a>. Hosting by <a href="http://bit.ly/dataklhost">DataKL</a>.</p>
+        <p>
+            Read the <a href="http://blog.pisyek.com/create-room-booking-system-laravel-fullcalendar/">tutorial</a>
+        </p>
         </div>
     </footer>
-
-</div><!-- /.container -->
-
-@stop
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    
+    @yield('js')
+    
+  </body>
+</html>

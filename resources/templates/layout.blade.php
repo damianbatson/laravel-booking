@@ -60,9 +60,9 @@
     </div> <!-- /container -->
 
     <footer class="footer">
-
+    <div class="container">
         <p>Booking System 2016</p>
-        
+        </div>
     </footer>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
