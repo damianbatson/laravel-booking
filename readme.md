@@ -2,11 +2,11 @@
 
 ## Official Documentation
 
-###app/Http/Controllers/BookingController.php
+### app/Http/Controllers/BookingController.php
 
 a basic CRUD with resource controller. the client can create a new booking, modify an existing one, view a booking and delete a booking.
 
-###database/migrations/2016_05_23_093221_create_bookings_table.php
+### database/migrations/2016_05_23_093221_create_bookings_table.php
 
 create a MySQL table with client details, start time, end time and timestamps.
 
